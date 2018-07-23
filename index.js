@@ -18,10 +18,11 @@ class ReactRouterGA extends React.Component<Props> {
     this.sendPageView = this.sendPageView.bind(this);
     this.initialize = this.initialize.bind(this);
 
-    this.initialize(props.id);
+   
   }
 
   componentDidMount() {
+    this.initialize(props.id);
     this.sendPageView(this.props.location);
     this.props.history.listen(this.sendPageView);
   }

@@ -22,7 +22,7 @@ class ReactRouterGA extends React.Component<Props> {
   }
 
   componentDidMount() {
-    this.initialize(props.id);
+    this.initialize(this.props.id);
     this.sendPageView(this.props.location);
     this.props.history.listen(this.sendPageView);
   }
